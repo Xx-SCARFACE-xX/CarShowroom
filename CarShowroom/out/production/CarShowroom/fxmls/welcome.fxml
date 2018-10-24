@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="718.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WelcomeController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="164.0" minHeight="0.0" prefHeight="163.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="339.0" minHeight="10.0" prefHeight="256.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fitHeight="495.0" fitWidth="713.0" GridPane.halignment="CENTER" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@welcome.jpg" />
+         </image>
+      </ImageView>
+      <Text blendMode="MULTIPLY" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="ASPHALT&#10;Car Showroom" textAlignment="CENTER" wrappingWidth="716.6708984375">
+         <font>
+            <Font name="Vineta BT" size="52.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.4943181818181818" centerY="0.5" radius="0.573170731707317">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#0fddcc" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Button fx:id="HeadToMng" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onHeadToMng" style="-fx-background-color: #2bbfe4;" text="Head To Management" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextFlow GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <children>
+            <TextArea blendMode="MULTIPLY" prefHeight="291.0" prefWidth="718.0" text="   WELCOME TO ASPHALT!&#10;&#10;We at Asphalt strive to&#10;provide our customers&#10;with the smoothest rides&#10;and the best deals on wheels." wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="27.0" />
+               </font>
+            </TextArea>
+         </children>
+      </TextFlow>
+   </children>
+</GridPane>

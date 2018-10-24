@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="root" hgap="5.0" prefHeight="737.0" prefWidth="915.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManagementController">
+  <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="104.0" minWidth="-Infinity" prefWidth="104.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="116.0" minWidth="-Infinity" prefWidth="116.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="110.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="110.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="110.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="110.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="110.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="110.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="71.0" minHeight="50.0" prefHeight="71.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="6.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="32.0" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="24.0" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="20.0" />
+      <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" />
+  </rowConstraints>
+   <children>
+      <ImageView blendMode="SRC_ATOP" fitHeight="68.0" fitWidth="1321.0" opacity="0.43" GridPane.columnSpan="8">
+         <image>
+            <Image url="@strip3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="129.0" fitWidth="910.0" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
+         <image>
+            <Image url="@strip2.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableview" editable="true" prefHeight="135.0" prefWidth="399.0" GridPane.columnSpan="8" GridPane.rowIndex="1" GridPane.rowSpan="10">
+        <columns>
+          <TableColumn fx:id="vidcol" prefWidth="115.0" text="VEHICLE ID" />
+            <TableColumn fx:id="brandcol" prefWidth="115.0" text="BRAND" />
+            <TableColumn fx:id="modelcol" prefWidth="115.0" text="MODEL" />
+            <TableColumn fx:id="typecol" prefWidth="115.0" text="TYPE" />
+            <TableColumn fx:id="colourcol" prefWidth="115.0" text="COLOUR" />
+            <TableColumn fx:id="statuscol" minWidth="0.0" prefWidth="115.0" text="STATUS" />
+            <TableColumn fx:id="rpricecol" prefWidth="103.0" text="RENT PRICE" />
+            <TableColumn fx:id="spricecol" prefWidth="127.0" text="SELLING PRICE" />
+        </columns>
+      </TableView>
+      <Button fx:id="rent" alignment="CENTER" contentDisplay="CENTER" maxHeight="37.0" maxWidth="80.0" minHeight="37.0" minWidth="80.0" mnemonicParsing="false" onAction="#onRent" opacity="0.9" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: black; -fx-border-width: 1px; -fx-border-color: black;" text="Rent" textAlignment="CENTER" textFill="RED" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buy" alignment="CENTER" contentDisplay="CENTER" maxHeight="37.0" maxWidth="80.0" minHeight="37.0" minWidth="80.0" mnemonicParsing="false" onAction="#onBuy" opacity="0.9" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: black; -fx-border-width: 1px; -fx-border-color: black;" text="BUY" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="7" GridPane.rowIndex="13">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="add" alignment="CENTER" contentDisplay="CENTER" maxHeight="37.0" maxWidth="80.0" minHeight="37.0" minWidth="80.0" mnemonicParsing="false" onAction="#onAdd" opacity="0.9" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: black; -fx-border-width: 1px; -fx-border-color: black;" text="Add" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ASPHALT CAR SHOWROOM" textAlignment="CENTER" wrappingWidth="681.70703125" GridPane.columnSpan="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="46.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <fill>
+            <RadialGradient centerX="0.5454545454545455" centerY="0.35922330097087374" focusAngle="-90.0" focusDistance="0.024390243902439046" radius="0.9024390243902439">
+               <stops>
+                  <Stop color="#4b3cd7" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Button fx:id="logOut" mnemonicParsing="false" onAction="#onLogOut" opacity="0.9" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: crimson; -fx-border-width: 1px; -fx-border-color: black;" text="Log Out" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="7">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="delete" alignment="CENTER" contentDisplay="CENTER" maxHeight="37.0" maxWidth="80.0" minHeight="37.0" minWidth="80.0" mnemonicParsing="false" onAction="#onDelete" opacity="0.9" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: black; -fx-border-width: 1px; -fx-border-color: black;" text="Delete" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="return1" alignment="CENTER" contentDisplay="CENTER" maxHeight="37.0" maxWidth="80.0" minHeight="37.0" minWidth="80.0" mnemonicParsing="false" onAction="#onReturn" opacity="0.9" prefHeight="37.0" prefWidth="80.0" style="-fx-background-color: black; -fx-border-width: 1px; -fx-border-color: black;" text="Retrun" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="search" alignment="CENTER" contentDisplay="CENTER" maxHeight="38.0" maxWidth="88.0" minHeight="37.0" minWidth="80.0" mnemonicParsing="false" onAction="#onSearch" opacity="0.9" prefHeight="38.0" prefWidth="88.0" style="-fx-background-color: black; -fx-border-width: 1px; -fx-border-color: black;" text="Search" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</GridPane>
